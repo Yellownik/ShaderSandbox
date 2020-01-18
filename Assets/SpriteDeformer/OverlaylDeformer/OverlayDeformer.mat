@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TunnelDeformer
-  m_Shader: {fileID: 4800000, guid: 58a702cddbb6fa54fbd4fa46d298ea19, type: 3}
+  m_Name: OverlayDeformer
+  m_Shader: {fileID: 4800000, guid: c55b108787a797743ba5aa41bd7b5e25, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DeformerTex:
-        m_Texture: {fileID: 2800000, guid: 05a3ef063abe06b4ca3bbc86a3057c73, type: 3}
+        m_Texture: {fileID: 2800000, guid: 64fe09da1ae67994cb530da685a998ae, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -32,9 +32,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Intensity: 0.874
-    - _MaskClip: 0.87
-    - _Speed: 0.2
+    - _Intensity: 1
+    - _Speed: 0.1
     m_Colors:
     - _Speed_1: {r: 0, g: 1, b: 0, a: 0}
     - _Speed_2: {r: 1, g: -2, b: 0, a: 0}

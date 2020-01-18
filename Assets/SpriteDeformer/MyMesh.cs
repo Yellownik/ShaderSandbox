@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MyMesh : MonoBehaviour
@@ -8,19 +9,26 @@ public class MyMesh : MonoBehaviour
     public int RegenerationCount = 3;
     public Vector3[] points;
 
+    private MeshFilter MeshFilter;
+
     void Start()
     {
         MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
         meshRenderer.material = mat;
 
         var meshGen = new MeshGenerator();
-        var filter = gameObject.AddComponent<MeshFilter>();
+        MeshFilter = gameObject.AddComponent<MeshFilter>();
 
-        filter.mesh = meshGen.GenerateMeshFromPoints(points);
+        MeshFilter.mesh = meshGen.GenerateMeshFromPoints(points);
 
         for (int i = 0; i < RegenerationCount; i++)
-        {
-            filter.mesh = MeshGenerator.RegenerateMesh(filter.mesh);
-        }
+            MeshFilter.mesh = MeshGenerator.RegenerateMesh(MeshFilter.mesh);
+    }
+
+    [ContextMenu("Save")]
+    public void Save()
+    {
+        AssetDatabase.CreateAsset(MeshFilter.mesh, "test");
+        AssetDatabase.SaveAssets();
     }
 }
