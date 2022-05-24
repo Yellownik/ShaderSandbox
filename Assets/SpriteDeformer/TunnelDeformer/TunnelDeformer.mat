@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DeformerTex:
-        m_Texture: {fileID: 2800000, guid: 8cb479f04d8582b47914e882c2ee5df2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6c5f16398e147d94f93c0a4e4720113b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -28,12 +28,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6b0f0430717ea4d4e96d245dbca2c117, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Intensity: 0.85
-    - _MaskClip: 0.85
+    - _Intensity: 0.243
+    - _MaskClip: 1.51
     - _Speed: 0.2
     m_Colors:
     - _Speed_1: {r: 0, g: 1, b: 0, a: 0}

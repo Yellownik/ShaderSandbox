@@ -4,8 +4,6 @@ Shader "Custom/Emission"
 	{
 		_MainTex("Texture", 2D) = "white" {}
 		_PartTex("_PartTex", 2D) = "white" {}
-		_Color("_Color", Color) = (1, 0, 0, 1)
-		_TimeScale("_TimeScale", Range(0, 2)) = 0.05
 	}
 		SubShader
 		{
@@ -26,9 +24,6 @@ Shader "Custom/Emission"
 				sampler2D_float _CameraDepthTexture;
 				sampler2D _MainTex;
 				sampler2D _PartTex;
-
-				float4 _Color;
-				float _TimeScale;
 
 				struct vertexInput
 				{
